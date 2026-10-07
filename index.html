@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="greeting-card">
+      <h1 id="greeting-text">Hello!</h1>
+      <p id="current-datetime"></p>
+    </header>
+
+    <main class="grid">
+      <!-- Focus Timer -->
+      <section class="card" id="timer-card">
+        <h2>Focus Timer</h2>
+        <div class="timer-display" id="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button id="timer-start" class="btn btn-primary">Start</button>
+          <button id="timer-stop" class="btn btn-secondary">Stop</button>
+          <button id="timer-reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List -->
+      <section class="card" id="todo-card">
+        <h2>To-Do List</h2>
+        <form id="todo-form" class="todo-input-row">
+          <input type="text" id="todo-input" placeholder="Add a new task..." maxlength="200" required>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+
+      <!-- Quick Links -->
+      <section class="card" id="links-card">
+        <h2>Quick Links</h2>
+        <form id="link-form" class="link-input-row">
+          <input type="text" id="link-name" placeholder="Name" maxlength="40" required>
+          <input type="url" id="link-url" placeholder="https://example.com" required>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <div id="link-list" class="link-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
